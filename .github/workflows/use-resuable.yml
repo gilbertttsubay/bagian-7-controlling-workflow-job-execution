@@ -9,4 +9,4 @@ jobs:
     with:
       input-name: Gilbert Subay
     secrets:
-      some-secret: ${{ secret.PERUSAHAAN_SAYA }}
+      some-secret: ${{ secrets.PERUSAHAAN_SAYA }}
