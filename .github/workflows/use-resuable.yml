@@ -3,4 +3,6 @@ on:
   push:
     branches:
       - master
-uses: ./.github/workflows/reusable.yml
+jobs:
+  ci:
+    uses: ./.github/workflows/reusable.yml
