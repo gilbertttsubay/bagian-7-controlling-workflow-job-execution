@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Output Information
         run: echo "Deploying & uploading.."
-  deploy 2:
+  deploy_2:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information 2
