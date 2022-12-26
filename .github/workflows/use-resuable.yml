@@ -8,3 +8,5 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       input-name: Gilbert Subay
+    secrets:
+      some-secret: ${{ secret.PERUSAHAAN_SAYA }}

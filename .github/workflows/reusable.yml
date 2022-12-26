@@ -5,12 +5,15 @@ on:
       input-name:
         type: string
         required: true
+    secrets:
+      some-secret:
+        required: false
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information
-        run: echo "Deploying & uploading.."
+        run: echo "Deploying & uploading.. my secret ${{ secrets.some-secret }}"
   deploy_2:
     runs-on: ubuntu-latest
     steps:
