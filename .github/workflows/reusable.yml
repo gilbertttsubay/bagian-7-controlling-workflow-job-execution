@@ -27,7 +27,3 @@ jobs:
     steps:
       - name: Output Information 2
         run: echo "Deploying & uploading ${{ inputs.input-name }}"
-  deploy_3:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output Result
