@@ -8,9 +8,9 @@ on:
     secrets:
       some-secret:
         required: false
-#    outputs:
-#      result:
-#        value: ${{ jobs.deploy.outputs.outcome }}
+    outputs:
+      result:
+        value: ${{ jobs.deploy.outputs.outcome }}
 jobs:
   deploy:
     outputs:
