@@ -8,14 +8,26 @@ on:
     secrets:
       some-secret:
         required: false
+    outputs:
+      result:
+        value: ${{ jobs.deploy.outputs.outcome }}
 jobs:
   deploy:
+    outputs:
+      outcome: ${{ steps.set-result.outputs.step-result }}
     runs-on: ubuntu-latest
     steps:
       - name: Output Information
         run: echo "Deploying & uploading.. my secret ${{ secrets.some-secret }}"
+      - name: Output Value
+        id: set-result
+        run: echo "step-result=success >> $GITHUB_OUTPUT"
   deploy_2:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information 2
         run: echo "Deploying & uploading ${{ inputs.input-name }}"
+  deploy_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Result
