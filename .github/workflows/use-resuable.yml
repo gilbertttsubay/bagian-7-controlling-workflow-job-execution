@@ -10,9 +10,9 @@ jobs:
       input-name: Gilbert Subay
     secrets:
       some-secret: ${{ secrets.PERUSAHAAN_SAYA }}
-  print-deploy:
-    needs: ci
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print deploy output
-        run: echo "${{ needs.ci.outputs.result }}"
+#  print-deploy:
+#    needs: ci
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Print deploy output
+#        run: echo "${{ needs.ci.outputs.result }}"
