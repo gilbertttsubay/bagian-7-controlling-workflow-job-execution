@@ -94,6 +94,7 @@ jobs:
           echo "${{ toJSON(github) }}"
   test-uat:
     needs: report
+    if: failure()
     environment: uat
     runs-on: ubuntu-latest
     steps:
