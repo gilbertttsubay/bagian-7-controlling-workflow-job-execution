@@ -7,8 +7,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
+    - name: Get code
+      uses: actions/checkout@v3
     - name: Cache dependencies
       id: cache
       uses: actions/cache@v3
@@ -70,8 +70,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environtment:
-      name: uat
+    environtment: uat
     steps:
       - name: Get build artifacts
         uses: actions/download-artifact@v3
