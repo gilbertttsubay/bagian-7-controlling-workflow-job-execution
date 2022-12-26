@@ -60,6 +60,9 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
+      - name: Test Code
+        continue-on-error: true
+        run: npm run tests
       - name: Build website
         id: build-website
         run: npm run build
