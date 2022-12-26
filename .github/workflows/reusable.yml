@@ -1,5 +1,10 @@
 name: Reusable Deploy
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      input-name:
+        type: string
+        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information 2
-        run: echo "Deploying & uploading.. 2"
+        run: echo "Deploying & uploading ${{ inputs.input-name }}"
