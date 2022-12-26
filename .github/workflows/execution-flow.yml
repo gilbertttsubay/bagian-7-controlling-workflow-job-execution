@@ -85,6 +85,7 @@ jobs:
   report:
     needs: [test]
     if: failure()
+    environment: uat
     runs-on: ubuntu-latest
     steps:
       - name: Output Information
