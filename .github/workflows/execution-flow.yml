@@ -69,7 +69,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environtment:
+    environment:
       name: uat
     steps:
       - name: Get build artifacts
