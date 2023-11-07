@@ -7,6 +7,14 @@ on:
     branches:
       - master
 jobs:
+  test-approval:
+    environment: uat
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Information
+        run: |
+          echo "Approval UAT"
+          echo "${{ toJSON(github) }}"
   lint:
     runs-on: ubuntu-latest
     steps:
