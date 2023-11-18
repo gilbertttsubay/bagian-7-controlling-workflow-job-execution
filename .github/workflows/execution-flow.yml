@@ -7,10 +7,15 @@ on:
     branches:
       - master
 jobs:
+
   test-approval:
     environment: uat
     runs-on: ubuntu-latest
     steps:
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          debug: true
       - name: Output Information
         run: |
           echo "Approval UAT"
